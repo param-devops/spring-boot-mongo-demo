@@ -22,16 +22,7 @@ Create docker image using Dockerfile
 docker build -t dockerhandson/spring-boot-mongo .
 ```
 
-## Deploy Application Using Docker Compose 
 
-```docker-compose 
-docker-compose up -d 
-```
-
-## List Docker Containers
-```docker
-docker ps -a
-```
 
 ## License
 [Param Technologies](http://paramtechnologies.co.in)
