@@ -4,3 +4,4 @@ metadata:
   name: springappconfigmap
 data:            # We can define multiple key value pairs.
   username: proddb
+  
