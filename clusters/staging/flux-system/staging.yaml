@@ -8,5 +8,5 @@ spec:
   interval: 30s
   ref:
     branch: main
-  url: https://github.com/param-devops/spring-boot-mongo-demo.git
+  url: https://github.com/param-devops/flux2-kustomize-helm-example.git
 
