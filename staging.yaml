@@ -2,19 +2,19 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: GitRepository
 metadata:
-  name: staging
+  name: prod
   namespace: flux-system
 spec:
   interval: 30s
   ref:
     branch: main
-  url: https://github.com/param-devops/spring-boot-mongo-demo.git
+  url: https://github.com/param-devops/podinfo.git
 
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
 kind: Kustomization
 metadata:
-  name: staging
+  name: prod
   namespace: flux-system
 spec:
   interval: 10m0s
@@ -22,21 +22,6 @@ spec:
   prune: true
   sourceRef:
     kind: GitRepository
-    name: staging
-  validation: client
-
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
-kind: Kustomization
-metadata:
-  name: staging
-  namespace: flux-system
-spec:
-  interval: 10m0s
-  path: ./
-  prune: true
-  sourceRef:
-    kind: GitRepository
-    name: staging
+    name: prod
   validation: client
 
